@@ -7,14 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A045A0CA1A41DB270053D5F7 /* Black.png in Resources */ = {isa = PBXBuildFile; fileRef = A045A0C91A41DB270053D5F7 /* Black.png */; };
 		A070AFBF1A2FF98800FFC704 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A070AFBE1A2FF98800FFC704 /* AppDelegate.swift */; };
-		A070AFC11A2FF98800FFC704 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = A070AFC01A2FF98800FFC704 /* GameScene.sks */; };
 		A070AFC31A2FF98800FFC704 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A070AFC21A2FF98800FFC704 /* GameScene.swift */; };
 		A070AFC51A2FF98800FFC704 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A070AFC41A2FF98800FFC704 /* GameViewController.swift */; };
 		A070AFC81A2FF98800FFC704 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A070AFC61A2FF98800FFC704 /* Main.storyboard */; };
 		A070AFCA1A2FF98800FFC704 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A070AFC91A2FF98800FFC704 /* Images.xcassets */; };
 		A070AFCD1A2FF98800FFC704 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A070AFCB1A2FF98800FFC704 /* LaunchScreen.xib */; };
 		A070AFD91A2FF98800FFC704 /* TapBreakTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A070AFD81A2FF98800FFC704 /* TapBreakTests.swift */; };
+		A0A53A1D1A393CC400EF0EF8 /* Circle.png in Resources */ = {isa = PBXBuildFile; fileRef = A0A53A1C1A393CC400EF0EF8 /* Circle.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,10 +29,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A045A0C91A41DB270053D5F7 /* Black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Black.png; sourceTree = "<group>"; };
 		A070AFB91A2FF98800FFC704 /* TapBreak.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TapBreak.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A070AFBD1A2FF98800FFC704 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A070AFBE1A2FF98800FFC704 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A070AFC01A2FF98800FFC704 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		A070AFC21A2FF98800FFC704 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		A070AFC41A2FF98800FFC704 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		A070AFC71A2FF98800FFC704 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -40,6 +41,7 @@
 		A070AFD21A2FF98800FFC704 /* TapBreakTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TapBreakTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A070AFD71A2FF98800FFC704 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A070AFD81A2FF98800FFC704 /* TapBreakTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapBreakTests.swift; sourceTree = "<group>"; };
+		A0A53A1C1A393CC400EF0EF8 /* Circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Circle.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,7 +84,6 @@
 			isa = PBXGroup;
 			children = (
 				A070AFBE1A2FF98800FFC704 /* AppDelegate.swift */,
-				A070AFC01A2FF98800FFC704 /* GameScene.sks */,
 				A070AFC21A2FF98800FFC704 /* GameScene.swift */,
 				A070AFC41A2FF98800FFC704 /* GameViewController.swift */,
 				A070AFC61A2FF98800FFC704 /* Main.storyboard */,
@@ -96,6 +97,8 @@
 		A070AFBC1A2FF98800FFC704 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A045A0C91A41DB270053D5F7 /* Black.png */,
+				A0A53A1C1A393CC400EF0EF8 /* Circle.png */,
 				A070AFBD1A2FF98800FFC704 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -199,9 +202,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				A070AFCD1A2FF98800FFC704 /* LaunchScreen.xib in Resources */,
+				A045A0CA1A41DB270053D5F7 /* Black.png in Resources */,
 				A070AFCA1A2FF98800FFC704 /* Images.xcassets in Resources */,
-				A070AFC11A2FF98800FFC704 /* GameScene.sks in Resources */,
 				A070AFC81A2FF98800FFC704 /* Main.storyboard in Resources */,
+				A0A53A1D1A393CC400EF0EF8 /* Circle.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,6 +419,7 @@
 				A070AFDE1A2FF98800FFC704 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A070AFDF1A2FF98800FFC704 /* Build configuration list for PBXNativeTarget "TapBreakTests" */ = {
 			isa = XCConfigurationList;
@@ -423,6 +428,7 @@
 				A070AFE11A2FF98800FFC704 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

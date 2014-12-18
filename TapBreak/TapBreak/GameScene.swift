@@ -9,43 +9,46 @@
 import SpriteKit
 
 class GameScene: SKScene {
-    /*override func didMoveToView(view: SKView) {
-        /* Setup your scene here */
-        let myLabel = SKLabelNode(fontNamed:"Chalkduster")
-        myLabel.text = "メインのゲームシーンです.";
-        myLabel.fontSize = 30;
-        myLabel.position = CGPoint(x:CGRectGetMidX(self.frame), y:CGRectGetMidY(self.frame));
-        self.addChild(myLabel)
-    }*/
-    override init(size: CGSize){
-        super.init(size: size)
-        let sprite = SKSpriteNode(imageNamed:"Spaceship")
-        sprite.position = CGPoint(x:0,y:0)
-        
-    }
-    required init(coder aDecoder: NSCoder){
+    var maru : SKSpriteNode
+    var counter: Int = 0
+    required init(coder aDecoder: NSCoder) {
         fatalError("NSCoder not supported")
     }
-    /*override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
-        /* Called when a touch begins */
-        
-        for touch: AnyObject in touches {
-            let location = touch.locationInNode(self)
-            
-            let sprite = SKSpriteNode(imageNamed:"Spaceship")
-            
-            sprite.xScale = 0.5
-            sprite.yScale = 0.5
-            sprite.position = location
-            
-            //let action = SKAction.rotateByAngle(CGFloat(M_PI), duration:1)
-            
-            //sprite.runAction(SKAction.repeatActionForever(action))
-            
-            self.addChild(sprite)
-        }
+    /*override init(size: CGSize) {
+        maru = SKSpriteNode(imageNamed: "Black")
+        maru.alpha = 1
+        maru.position = CGPoint(x: 50, y: 50)
+        maru.size = CGSize(width: 100, height: 100)
+        super.init(size: size)
+        backgroundColor = SKColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 1.0)
+        addChild(maru)
     }*/
-   
+    override init(size: CGSize) {
+        
+        maru = SKSpriteNode(imageNamed: "Black")
+        maru.alpha = 1
+        maru.position = CGPoint(x: 100, y: 100)
+        //maru.size = CGSize(width: 100, height: 100)
+        //maru.xScale = 0.2
+        //maru.yScale = 0.2
+        maru.name = "Black"
+        super.init(size: size)
+        backgroundColor = SKColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 1.0)
+        addChild(maru)
+    }
+    override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
+        let touch: AnyObject = touches.anyObject()!
+        let location = touch.locationInNode(maru)
+        let touchedNode = self.nodeAtPoint(location)
+        
+        //if (touchedNode.name != nil) {
+            if(touchedNode.name == "Black"){
+                counter += 1
+                println("touched Black \(counter)")
+            }
+            
+        //}
+    }
     override func update(currentTime: CFTimeInterval) {
         /* Called before each frame is rendered */
     }
