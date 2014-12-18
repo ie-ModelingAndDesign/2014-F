@@ -15,7 +15,7 @@ DerivedData
 *.hmap
 *.ipa
 *.xcuserstate
-Project/*/*/project.xcworkspace/xcuserdata/*.xcuserdatad/UserInterfaceState.xcuserstate
+*/*/project.xcworkspace/xcuserdata/*.xcuserdatad/UserInterfaceState.xcuserstate
 
 # CocoaPod
 Pods/*
