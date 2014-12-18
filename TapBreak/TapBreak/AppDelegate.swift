@@ -6,8 +6,6 @@
 //  Copyright (c) 2014年 Modering-Team-F. All rights reserved.
 //
 
-// hogehogehoge
-
 import UIKit
 
 @UIApplicationMain
