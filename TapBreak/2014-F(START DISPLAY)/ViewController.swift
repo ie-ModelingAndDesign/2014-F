@@ -59,7 +59,7 @@ class ViewController: UIViewController {
     func onClickMyButton(sender: UIButton){
         
         // 遷移するViewを定義する.
-        let mySecondViewController: UIViewController = SecondViewController()
+        let mySecondViewController: UIViewController = GameViewController()
         
         // アニメーションを設定する.
         mySecondViewController.modalTransitionStyle = UIModalTransitionStyle.CoverVertical

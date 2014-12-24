@@ -41,16 +41,26 @@ class GameScene: SKScene {
         let touch: AnyObject = touches.anyObject()!
         let location = touch.locationInNode(maru)
         let touchedNode = self.nodeAtPoint(location)
-        if(touchedNode.name == "Black"){
+        if(touchedNode.name != nil){
             counter += 1
+            
             println("touched Black \(counter)")
         }
         if(counter == 10){
             //addBlack(maru)
-            maru = SKSpriteNode(imageNamed: "Black")
+            maru = SKSpriteNode(imageNamed: "Circle")
             maru.alpha = 0.2
             maru.position = CGPoint(x: 100, y: 100)
-            maru.name = "Black"
+            maru.name = "Circle"
+            //backgroundColor = SKColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 1.0)
+            addChild(maru)
+        }
+        if(counter == 20){
+            //addBlack(maru)
+            maru = SKSpriteNode(imageNamed: "Batsu")
+            maru.alpha = 0.2
+            maru.position = CGPoint(x: 100, y: 100)
+            maru.name = "Batsu"
             //backgroundColor = SKColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 1.0)
             addChild(maru)
         }
