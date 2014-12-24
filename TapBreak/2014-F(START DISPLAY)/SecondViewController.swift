@@ -74,7 +74,7 @@ class SecondViewController: UIViewController,UITextFieldDelegate {
     func onClickMyButton(sender: UIButton){
         
         // 遷移するViewを定義.
-        let myViewController: UIViewController = ViewController()
+        let myViewController: UIViewController = GameViewController()
         
         // アニメーションを設定.
         myViewController.modalTransitionStyle = UIModalTransitionStyle.FlipHorizontal
