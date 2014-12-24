@@ -17,7 +17,8 @@ class GameScene: SKScene {
     override init(size: CGSize) {
         maru = SKSpriteNode(imageNamed: "Black")
         maru.alpha = 0.2
-        maru.position = CGPoint(x: 100, y: 100)
+        maru.position = CGPoint(x: 10, y: 10)
+        maru.anchorPoint = CGPoint(x: 0, y: 0)
         maru.name = "Black"
         //maru.size = CGSize(width: 100, height: 100)
         super.init(size: size)
@@ -44,22 +45,26 @@ class GameScene: SKScene {
         if(touchedNode.name != nil){
             counter += 1
             
-            println("touched Black \(counter)")
+            println("touched \(maru.name) \(counter)")
         }
         if(counter == 10){
             //addBlack(maru)
+            maru.removeFromParent()
             maru = SKSpriteNode(imageNamed: "Circle")
             maru.alpha = 0.2
-            maru.position = CGPoint(x: 100, y: 100)
+            maru.position = CGPoint(x: 10, y: 10)
+            maru.anchorPoint = CGPoint(x: 0, y: 0)
             maru.name = "Circle"
             //backgroundColor = SKColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 1.0)
             addChild(maru)
         }
         if(counter == 20){
             //addBlack(maru)
+            maru.removeFromParent()
             maru = SKSpriteNode(imageNamed: "Batsu")
             maru.alpha = 0.2
-            maru.position = CGPoint(x: 100, y: 100)
+            maru.position = CGPoint(x: 10, y: 10)
+            maru.anchorPoint = CGPoint(x: 0, y: 0)
             maru.name = "Batsu"
             //backgroundColor = SKColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 1.0)
             addChild(maru)
