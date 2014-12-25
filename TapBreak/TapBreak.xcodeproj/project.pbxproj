@@ -10,6 +10,7 @@
 		6F5324751A4470FA005FE287 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F53246D1A4470FA005FE287 /* SecondViewController.swift */; };
 		6F5324761A4470FA005FE287 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F53246E1A4470FA005FE287 /* ThirdViewController.swift */; };
 		6F5324771A4470FA005FE287 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F53246F1A4470FA005FE287 /* ViewController.swift */; };
+		A03449EE1A4BA22E00F0AA80 /* macbook.png in Resources */ = {isa = PBXBuildFile; fileRef = A03449ED1A4BA22E00F0AA80 /* macbook.png */; };
 		A045A0CA1A41DB270053D5F7 /* Black.png in Resources */ = {isa = PBXBuildFile; fileRef = A045A0C91A41DB270053D5F7 /* Black.png */; };
 		A070AFBF1A2FF98800FFC704 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A070AFBE1A2FF98800FFC704 /* AppDelegate.swift */; };
 		A070AFC31A2FF98800FFC704 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A070AFC21A2FF98800FFC704 /* GameScene.swift */; };
@@ -36,6 +37,7 @@
 		6F53246D1A4470FA005FE287 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SecondViewController.swift; path = "../2014-F(START DISPLAY)/SecondViewController.swift"; sourceTree = "<group>"; };
 		6F53246E1A4470FA005FE287 /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ThirdViewController.swift; path = "../2014-F(START DISPLAY)/ThirdViewController.swift"; sourceTree = "<group>"; };
 		6F53246F1A4470FA005FE287 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = "../2014-F(START DISPLAY)/ViewController.swift"; sourceTree = "<group>"; };
+		A03449ED1A4BA22E00F0AA80 /* macbook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = macbook.png; sourceTree = "<group>"; };
 		A045A0C91A41DB270053D5F7 /* Black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Black.png; sourceTree = "<group>"; };
 		A070AFB91A2FF98800FFC704 /* TapBreak.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TapBreak.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A070AFBD1A2FF98800FFC704 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 		A070AFBC1A2FF98800FFC704 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A03449ED1A4BA22E00F0AA80 /* macbook.png */,
 				A0B3F5471A4A6E1E0016EDC7 /* Batsu.png */,
 				A045A0C91A41DB270053D5F7 /* Black.png */,
 				A0A53A1C1A393CC400EF0EF8 /* Circle.png */,
@@ -219,6 +222,7 @@
 				A070AFC81A2FF98800FFC704 /* Main.storyboard in Resources */,
 				A0B3F5481A4A6E1E0016EDC7 /* Batsu.png in Resources */,
 				A0A53A1D1A393CC400EF0EF8 /* Circle.png in Resources */,
+				A03449EE1A4BA22E00F0AA80 /* macbook.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

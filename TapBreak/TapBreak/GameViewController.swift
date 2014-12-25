@@ -42,10 +42,10 @@ class GameViewController: UIViewController, UIGestureRecognizerDelegate {
     override func prefersStatusBarHidden() -> Bool {
         return true
     }
-    @IBAction func didTap(sender: UITapGestureRecognizer) {
+    /*@IBAction func didTap(sender: UITapGestureRecognizer) {
         let TapPositon = sender.locationInView(view)
         println("tapped at \(TapPositon.x), \(TapPositon.y)")
 
-    }
+    }*/
     
 }
