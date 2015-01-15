@@ -17,9 +17,9 @@ class GameScene: SKScene {
     override init(size: CGSize) {
         maru = SKSpriteNode(imageNamed: "macbook")
         maru.alpha = 1
-        maru.position = CGPoint(x: 100, y: 100)
-        maru.xScale = 0.3
-        maru.yScale = 0.3
+        maru.position = CGPoint(x: 50, y: 130)
+        maru.xScale = 0.4
+        maru.yScale = 0.4
         maru.anchorPoint = CGPoint(x: 0, y: 0)
         maru.name = "macbook"
         //maru.size = CGSize(width: 100, height: 100)
@@ -59,7 +59,11 @@ class GameScene: SKScene {
                 //backgroundColor = SKColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 1.0)
                 addChild(maru)
             }
-
+            if(counter > 30){
+                var Rscene: SKScene
+                Rscene = ResultScene(size: size)
+                self.view?.presentScene(Rscene)
+            }
         }
     }
     override func update(currentTime: CFTimeInterval) {

@@ -26,14 +26,14 @@ import SpriteKit
 }*/
 
 class GameViewController: UIViewController, UIGestureRecognizerDelegate {
-    var scene: GameScene!
+    var scene: StartScene!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         let skView = view as SKView
         skView.multipleTouchEnabled = false
         
-        scene = GameScene(size: skView.bounds.size)
+        scene = StartScene(size: skView.bounds.size)
         scene.scaleMode = .AspectFill
         skView.presentScene(scene)
         
