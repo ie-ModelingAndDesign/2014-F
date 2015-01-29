@@ -64,6 +64,11 @@ class GameScene: SKScene {
                 Rscene = ResultScene(size: size)
                 self.view?.presentScene(Rscene)
             }
+            // 再生データの作成.
+            let mySoundAction: SKAction = SKAction.playSoundFileNamed("short_punch1.mp3", waitForCompletion: true)
+            
+            // 再生アクション.
+            self.runAction(mySoundAction);
         }
     }
     override func update(currentTime: CFTimeInterval) {
