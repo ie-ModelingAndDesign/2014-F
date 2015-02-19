@@ -37,7 +37,7 @@ class GameScene: SKScene {
                 
                 println("touched \(maru.name) \(counter)")
             }
-            if(maru.name == "macbook"){
+            if(maru.name != nil){
                 // 再生データの作成.
                 let mySoundAction: SKAction = SKAction.playSoundFileNamed("short_punch1.mp3", waitForCompletion: true)
                 
@@ -148,7 +148,7 @@ class GameScene: SKScene {
                 //backgroundColor = SKColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 1.0)
                 addChild(maru)
             }
-            if(counter >= 90){
+            if(counter > 90){
                 var Rscene: SKScene
                 Rscene = ResultScene(size: size)
                 self.view?.presentScene(Rscene)
