@@ -9,7 +9,7 @@
 import UIKit
 import SpriteKit
 
-/*extension SKNode {
+extension SKNode {
     class func unarchiveFromFile(file : NSString) -> SKNode? {
         if let path = NSBundle.mainBundle().pathForResource(file, ofType: "sks") {
             var sceneData = NSData(contentsOfFile: path, options: .DataReadingMappedIfSafe, error: nil)!
@@ -23,7 +23,7 @@ import SpriteKit
             return nil
         }
     }
-}*/
+}
 
 class GameViewController: UIViewController, UIGestureRecognizerDelegate {
     var scene: StartScene!
@@ -42,10 +42,4 @@ class GameViewController: UIViewController, UIGestureRecognizerDelegate {
     override func prefersStatusBarHidden() -> Bool {
         return true
     }
-    /*@IBAction func didTap(sender: UITapGestureRecognizer) {
-        let TapPositon = sender.locationInView(view)
-        println("tapped at \(TapPositon.x), \(TapPositon.y)")
-
-    }*/
-    
 }

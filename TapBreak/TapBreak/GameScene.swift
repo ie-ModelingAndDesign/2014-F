@@ -37,38 +37,123 @@ class GameScene: SKScene {
                 
                 println("touched \(maru.name) \(counter)")
             }
+            if(maru.name == "macbook"){
+                // 再生データの作成.
+                let mySoundAction: SKAction = SKAction.playSoundFileNamed("short_punch1.mp3", waitForCompletion: true)
+                
+                // 再生アクション.
+                self.runAction(mySoundAction);
+            }
             if(counter == 10){
                 //addBlack(maru)
                 maru.removeFromParent()
-                maru = SKSpriteNode(imageNamed: "Circle")
+                maru = SKSpriteNode(imageNamed: "macbook3")
                 maru.alpha = 1
-                maru.position = CGPoint(x: 100, y: 100)
+                maru.position = CGPoint(x: 53, y: 135)
+                maru.xScale = 0.4
+                maru.yScale = 0.4
                 maru.anchorPoint = CGPoint(x: 0, y: 0)
-                maru.name = "Circle"
+                maru.name = "macbook3"
                 //backgroundColor = SKColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 1.0)
                 addChild(maru)
             }
             if(counter == 20){
                 //addBlack(maru)
                 maru.removeFromParent()
-                maru = SKSpriteNode(imageNamed: "Batsu")
+                maru = SKSpriteNode(imageNamed: "macbook4")
                 maru.alpha = 1
-                maru.position = CGPoint(x: 100, y: 100)
+                maru.position = CGPoint(x: 53, y: 135)
+                maru.xScale = 0.4
+                maru.yScale = 0.4
                 maru.anchorPoint = CGPoint(x: 0, y: 0)
-                maru.name = "Batsu"
+                maru.name = "macbook4"
                 //backgroundColor = SKColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 1.0)
                 addChild(maru)
             }
-            if(counter > 30){
+            if(counter == 30){
+                //addBlack(maru)
+                maru.removeFromParent()
+                maru = SKSpriteNode(imageNamed: "macbook5")
+                maru.alpha = 1
+                maru.position = CGPoint(x: 53, y: 135)
+                maru.xScale = 0.4
+                maru.yScale = 0.4
+                maru.anchorPoint = CGPoint(x: 0, y: 0)
+                maru.name = "macbook5"
+                //backgroundColor = SKColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 1.0)
+                addChild(maru)
+            }
+            if(counter == 40){
+                //addBlack(maru)
+                maru.removeFromParent()
+                maru = SKSpriteNode(imageNamed: "macbook6")
+                maru.alpha = 1
+                maru.position = CGPoint(x: 53, y: 135)
+                maru.xScale = 0.4
+                maru.yScale = 0.4
+                maru.anchorPoint = CGPoint(x: 0, y: 0)
+                maru.name = "macbook6"
+                //backgroundColor = SKColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 1.0)
+                addChild(maru)
+            }
+            if(counter == 50){
+                //addBlack(maru)
+                maru.removeFromParent()
+                maru = SKSpriteNode(imageNamed: "macbook7")
+                maru.alpha = 1
+                maru.position = CGPoint(x: 53, y: 135)
+                maru.xScale = 0.4
+                maru.yScale = 0.4
+                maru.anchorPoint = CGPoint(x: 0, y: 0)
+                maru.name = "macbook7"
+                //backgroundColor = SKColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 1.0)
+                addChild(maru)
+            }
+            if(counter == 60){
+                //addBlack(maru)
+                maru.removeFromParent()
+                maru = SKSpriteNode(imageNamed: "macbook8")
+                maru.alpha = 1
+                maru.position = CGPoint(x: 53, y: 135)
+                maru.xScale = 0.4
+                maru.yScale = 0.4
+                maru.anchorPoint = CGPoint(x: 0, y: 0)
+                maru.name = "macbook8"
+                //backgroundColor = SKColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 1.0)
+                addChild(maru)
+            }
+            if(counter == 70){
+                //addBlack(maru)
+                maru.removeFromParent()
+                maru = SKSpriteNode(imageNamed: "macbook9")
+                maru.alpha = 1
+                maru.position = CGPoint(x: 53, y: 135)
+                maru.xScale = 0.4
+                maru.yScale = 0.4
+                maru.anchorPoint = CGPoint(x: 0, y: 0)
+                maru.name = "macbook9"
+                //backgroundColor = SKColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 1.0)
+                addChild(maru)
+            }
+            if(counter == 80){
+                //addBlack(maru)
+                maru.removeFromParent()
+                maru = SKSpriteNode(imageNamed: "macbook10")
+                maru.alpha = 1
+                maru.position = CGPoint(x: 53, y: 135)
+                maru.xScale = 0.4
+                maru.yScale = 0.4
+                maru.anchorPoint = CGPoint(x: 0, y: 0)
+                maru.name = "macbook10"
+                //backgroundColor = SKColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 1.0)
+                addChild(maru)
+            }
+            if(counter >= 90){
                 var Rscene: SKScene
                 Rscene = ResultScene(size: size)
                 self.view?.presentScene(Rscene)
             }
-            // 再生データの作成.
-            let mySoundAction: SKAction = SKAction.playSoundFileNamed("short_punch1.mp3", waitForCompletion: true)
             
-            // 再生アクション.
-            self.runAction(mySoundAction);
         }
     }
     override func update(currentTime: CFTimeInterval) {
