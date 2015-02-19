@@ -11,6 +11,32 @@ import SpriteKit
 
 class ResultScene: SKScene {
     var resultLabel : SKLabelNode
+    override func didMoveToView(view: SKView) {
+        let ud = NSUserDefaults.standardUserDefaults()
+        var score = ud.integerForKey("score")
+        var hi_score = ud.integerForKey("hi_score")
+        
+        let scoreLabel = SKLabelNode(fontNamed:"Copperplate")
+        scoreLabel.text = "SCORE:\(score)";
+        scoreLabel.fontColor = UIColor.redColor()
+        scoreLabel.fontSize = 72;
+        scoreLabel.position = CGPoint(x:CGRectGetMidX(self.frame), y:CGRectGetMidY(self.frame));
+        self.addChild(scoreLabel)
+        
+        if score > hi_score {
+            ud.setInteger(score, forKey: "hi_score")
+            hi_score = score
+        }
+        
+        // ハイスコアを表示。
+        let hiLabel = SKLabelNode(fontNamed:"Copperplate")
+        hiLabel.text = "過去最高得点:\(hi_score)";
+        hiLabel.fontColor = UIColor.redColor()
+        hiLabel.fontSize = 36;
+        hiLabel.position = CGPoint(x:CGRectGetMidX(self.frame), y:CGRectGetMidY(self.frame)-100);
+        backgroundColor = SKColor(red: 255, green: 255, blue: 255, alpha: 1.0)
+        self.addChild(hiLabel)
+    }
     override init(size: CGSize) {
         resultLabel = SKLabelNode(fontNamed: "TimeUp")
         resultLabel.text = "TimeUp"

@@ -155,6 +155,8 @@ class GameScene: SKScene {
             }
             
         }
+        let ud = NSUserDefaults.standardUserDefaults()
+        ud.setInteger(counter, forKey: "score")
     }
     override func update(currentTime: CFTimeInterval) {
         /* Called before each frame is rendered */
