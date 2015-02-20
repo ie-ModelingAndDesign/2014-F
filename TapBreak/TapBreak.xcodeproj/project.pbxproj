@@ -29,6 +29,7 @@
 		A0E585731A95B1E80051D209 /* macbook10.png in Resources */ = {isa = PBXBuildFile; fileRef = A0E585721A95B1E80051D209 /* macbook10.png */; };
 		A0F02BA11A79D30200FFDA46 /* short_punch1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A0F02BA01A79D30200FFDA46 /* short_punch1.mp3 */; };
 		A0F02BA31A79D59B00FFDA46 /* macbook3.png in Resources */ = {isa = PBXBuildFile; fileRef = A0F02BA21A79D59B00FFDA46 /* macbook3.png */; };
+		A0F8DE2B1A9727860069C557 /* macbook.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F8DE2A1A9727860069C557 /* macbook.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,7 @@
 		A0E585721A95B1E80051D209 /* macbook10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = macbook10.png; sourceTree = "<group>"; };
 		A0F02BA01A79D30200FFDA46 /* short_punch1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = short_punch1.mp3; sourceTree = "<group>"; };
 		A0F02BA21A79D59B00FFDA46 /* macbook3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = macbook3.png; sourceTree = "<group>"; };
+		A0F8DE2A1A9727860069C557 /* macbook.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = macbook.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 				A070AFBE1A2FF98800FFC704 /* AppDelegate.swift */,
 				A070AFC21A2FF98800FFC704 /* GameScene.swift */,
 				A0B3388D1A6753F700D59718 /* ResultScene.swift */,
+				A0F8DE2A1A9727860069C557 /* macbook.swift */,
 				A0B3388B1A66D2AC00D59718 /* StartScene.swift */,
 				A070AFC41A2FF98800FFC704 /* GameViewController.swift */,
 				A070AFC61A2FF98800FFC704 /* Main.storyboard */,
@@ -275,6 +278,7 @@
 			files = (
 				A070AFC31A2FF98800FFC704 /* GameScene.swift in Sources */,
 				A070AFC51A2FF98800FFC704 /* GameViewController.swift in Sources */,
+				A0F8DE2B1A9727860069C557 /* macbook.swift in Sources */,
 				A070AFBF1A2FF98800FFC704 /* AppDelegate.swift in Sources */,
 				A0B3388E1A6753F700D59718 /* ResultScene.swift in Sources */,
 				A0B3388C1A66D2AC00D59718 /* StartScene.swift in Sources */,

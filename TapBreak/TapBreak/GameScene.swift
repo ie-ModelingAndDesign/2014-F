@@ -10,6 +10,7 @@ import SpriteKit
 
 class GameScene: SKScene {
     var maru : SKSpriteNode
+    var time: Int = 30
     var counter: Int = 0
     required init(coder aDecoder: NSCoder) {
         fatalError("NSCoder not supported")
@@ -26,6 +27,37 @@ class GameScene: SKScene {
         super.init(size: size)
         backgroundColor = SKColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 1.0)
         addChild(maru)
+    }
+    override func didMoveToView(view: SKView) {
+        //let mac = macbook()
+        //mac.show("macbook")
+        // 一秒ごとにupdateを呼び出す
+        /*maru = SKSpriteNode(imageNamed: "macbook")
+        maru.alpha = 1
+        maru.position = CGPoint(x: 50, y: 130)
+        maru.xScale = 0.4
+        maru.yScale = 0.4
+        maru.anchorPoint = CGPoint(x: 0, y: 0)
+        maru.name = "macbook"
+        backgroundColor = SKColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 1.0)
+        self.addChild(maru)*/
+        
+        
+        if(time > 0){
+            var timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: "update", userInfo: nil, repeats: true)
+        }
+    }
+    //var Tlimit : SKLabelNode
+    func update() {
+        time--
+        /*Tlimit = SKLabelNode(fontNamed: "limit")
+        Tlimit.text = "\(time)"
+        Tlimit.fontColor = UIColor.redColor()
+        Tlimit.fontSize = 50
+        Tlimit.position = CGPoint(x: 100, y: 700)
+        Tlimit.name = "limit"
+        self.addChild(Tlimit)*/
+        println("\(time)")
     }
     override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
         for touch: AnyObject in touches {
@@ -44,7 +76,7 @@ class GameScene: SKScene {
                 // 再生アクション.
                 self.runAction(mySoundAction);
             }
-            if(counter == 10){
+            if(counter == 30){
                 //addBlack(maru)
                 maru.removeFromParent()
                 maru = SKSpriteNode(imageNamed: "macbook3")
@@ -57,7 +89,7 @@ class GameScene: SKScene {
                 //backgroundColor = SKColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 1.0)
                 addChild(maru)
             }
-            if(counter == 20){
+            if(counter == 50){
                 //addBlack(maru)
                 maru.removeFromParent()
                 maru = SKSpriteNode(imageNamed: "macbook4")
@@ -70,7 +102,7 @@ class GameScene: SKScene {
                 //backgroundColor = SKColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 1.0)
                 addChild(maru)
             }
-            if(counter == 30){
+            if(counter == 70){
                 //addBlack(maru)
                 maru.removeFromParent()
                 maru = SKSpriteNode(imageNamed: "macbook5")
@@ -83,7 +115,7 @@ class GameScene: SKScene {
                 //backgroundColor = SKColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 1.0)
                 addChild(maru)
             }
-            if(counter == 40){
+            if(counter == 90){
                 //addBlack(maru)
                 maru.removeFromParent()
                 maru = SKSpriteNode(imageNamed: "macbook6")
@@ -96,7 +128,7 @@ class GameScene: SKScene {
                 //backgroundColor = SKColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 1.0)
                 addChild(maru)
             }
-            if(counter == 50){
+            if(counter == 110){
                 //addBlack(maru)
                 maru.removeFromParent()
                 maru = SKSpriteNode(imageNamed: "macbook7")
@@ -109,7 +141,7 @@ class GameScene: SKScene {
                 //backgroundColor = SKColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 1.0)
                 addChild(maru)
             }
-            if(counter == 60){
+            if(counter == 125){
                 //addBlack(maru)
                 maru.removeFromParent()
                 maru = SKSpriteNode(imageNamed: "macbook8")
@@ -122,7 +154,7 @@ class GameScene: SKScene {
                 //backgroundColor = SKColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 1.0)
                 addChild(maru)
             }
-            if(counter == 70){
+            if(counter == 140){
                 //addBlack(maru)
                 maru.removeFromParent()
                 maru = SKSpriteNode(imageNamed: "macbook9")
@@ -135,7 +167,7 @@ class GameScene: SKScene {
                 //backgroundColor = SKColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 1.0)
                 addChild(maru)
             }
-            if(counter == 80){
+            if(counter == 150){
                 //addBlack(maru)
                 maru.removeFromParent()
                 maru = SKSpriteNode(imageNamed: "macbook10")
@@ -148,10 +180,23 @@ class GameScene: SKScene {
                 //backgroundColor = SKColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 1.0)
                 addChild(maru)
             }
-            if(counter > 90){
+            if(time <= 0){
+                maru.removeFromParent()
+                /*let RScene = ResultScene(size: self.scene!.size)
+                
+                // 水平方向にドアをクローズして遷移させるエフェクトを作る.
+                let TransitionEffect = SKTransition.doorsCloseHorizontalWithDuration(1.0)
+                
+                // 遷移先のシーンと遷移前のシーンのサイズを合わせる.
+                RScene.size = self.frame.size
+                
+                // シーンを遷移させる.
+                self.view?.presentScene(RScene, transition: TransitionEffect)*/
                 var Rscene: SKScene
                 Rscene = ResultScene(size: size)
-                self.view?.presentScene(Rscene)
+                Rscene.size = self.frame.size
+                let TransitionEffect = SKTransition.doorsCloseHorizontalWithDuration(1.0)
+                self.view?.presentScene(Rscene, transition:TransitionEffect)
             }
             
         }

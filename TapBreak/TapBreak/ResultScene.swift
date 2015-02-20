@@ -36,6 +36,15 @@ class ResultScene: SKScene {
         hiLabel.position = CGPoint(x:CGRectGetMidX(self.frame), y:CGRectGetMidY(self.frame)-100);
         backgroundColor = SKColor(red: 255, green: 255, blue: 255, alpha: 1.0)
         self.addChild(hiLabel)
+        
+        /*resultLabel = SKLabelNode(fontNamed: "TimeUp")
+        resultLabel.text = "TimeUp"
+        resultLabel.fontColor = UIColor.redColor()
+        resultLabel.fontSize = 50
+        resultLabel.position = CGPoint(x: 100, y: 100)
+        resultLabel.name = "TimeUp"
+        backgroundColor = SKColor(red: 255, green: 255, blue: 255, alpha: 1.0)
+        self.addChild(resultLabel)*/
     }
     override init(size: CGSize) {
         resultLabel = SKLabelNode(fontNamed: "TimeUp")
@@ -63,9 +72,21 @@ class ResultScene: SKScene {
         for touch: AnyObject in touches{
             let location = touch.locationInNode(self)
             if(resultLabel.containsPoint(location)){
+                /*let SScene = StartScene(size: self.scene!.size)
+                
+                // 水平方向にドアをクローズして遷移させるエフェクトを作る.
+                let TransitionEffect = SKTransition.doorsCloseHorizontalWithDuration(1.0)
+                
+                // 遷移先のシーンと遷移前のシーンのサイズを合わせる.
+                SScene.size = self.frame.size
+                
+                // シーンを遷移させる.
+                self.view?.presentScene(SScene, transition: TransitionEffect)*/
                 var Sscene: SKScene
                 Sscene = StartScene(size: size)
-                self.view?.presentScene(Sscene)
+                Sscene.size = self.frame.size
+                let TransitionEffect = SKTransition.doorsCloseHorizontalWithDuration(1.0)
+                self.view?.presentScene(Sscene, transition: TransitionEffect)
             }
         }
     }
