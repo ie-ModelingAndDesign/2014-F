@@ -21,7 +21,7 @@ class StartScene: SKScene {
         self.addChild(startLabel)
     }*/
     override init(size: CGSize) {
-        startLabel = SKLabelNode(fontNamed: "Start")
+        startLabel = SKLabelNode(fontNamed: "American Typewriter Bold")
         startLabel.text = "Start"
         startLabel.fontColor = UIColor.redColor()
         startLabel.fontSize = 50
@@ -33,22 +33,14 @@ class StartScene: SKScene {
     }
     
     override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
+        let ud = NSUserDefaults.standardUserDefaults()
+        ud.removeObjectForKey("score")
         for touch: AnyObject in touches{
             let location = touch.locationInNode(self)
             if(startLabel.containsPoint(location)){
-                /*let GScene = GameScene(size: self.scene.size)
-                
-                // 水平方向にドアをクローズして遷移させるエフェクトを作る.
-                let TransitionEffect = SKTransition.doorsCloseHorizontalWithDuration(1.0)
-                
-                // 遷移先のシーンと遷移前のシーンのサイズを合わせる.
-                GScene.size = self.frame.size
-                
-                // シーンを遷移させる.
-                self.view?.presentScene(GScene, transition: TransitionEffect)*/
                 let Gscene = GameScene(size: size)
                 Gscene.size = self.frame.size
-                let TransitionEffect = SKTransition.doorsCloseHorizontalWithDuration(1.0)
+                let TransitionEffect = SKTransition.pushWithDirection(SKTransitionDirection.Left, duration: 0.5)
                 self.view?.presentScene(Gscene, transition: TransitionEffect)
             }
         }

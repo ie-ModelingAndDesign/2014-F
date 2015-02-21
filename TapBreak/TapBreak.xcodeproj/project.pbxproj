@@ -20,6 +20,12 @@
 		A0B3388C1A66D2AC00D59718 /* StartScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B3388B1A66D2AC00D59718 /* StartScene.swift */; };
 		A0B3388E1A6753F700D59718 /* ResultScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B3388D1A6753F700D59718 /* ResultScene.swift */; };
 		A0B3F5481A4A6E1E0016EDC7 /* Batsu.png in Resources */ = {isa = PBXBuildFile; fileRef = A0B3F5471A4A6E1E0016EDC7 /* Batsu.png */; };
+		A0C66E8B1A98610D00854183 /* glass-break4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A0C66E8A1A98610D00854183 /* glass-break4.mp3 */; };
+		A0C66E8D1A98617300854183 /* glass-break2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A0C66E8C1A98617300854183 /* glass-break2.mp3 */; };
+		A0C66E8F1A986F1A00854183 /* macbook11.png in Resources */ = {isa = PBXBuildFile; fileRef = A0C66E8E1A986F1A00854183 /* macbook11.png */; };
+		A0C66E921A98DC8100854183 /* MacSmoke.sks in Resources */ = {isa = PBXBuildFile; fileRef = A0C66E901A98DC8100854183 /* MacSmoke.sks */; };
+		A0C66E931A98DC8100854183 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = A0C66E911A98DC8100854183 /* spark.png */; };
+		A0C66E951A98F7A300854183 /* SmokeParticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C66E941A98F7A300854183 /* SmokeParticle.swift */; };
 		A0E585671A95A9FB0051D209 /* macbook4.png in Resources */ = {isa = PBXBuildFile; fileRef = A0E585661A95A9FB0051D209 /* macbook4.png */; };
 		A0E585691A95AB220051D209 /* macbook5.png in Resources */ = {isa = PBXBuildFile; fileRef = A0E585681A95AB220051D209 /* macbook5.png */; };
 		A0E5856B1A95ADC20051D209 /* macbook6.png in Resources */ = {isa = PBXBuildFile; fileRef = A0E5856A1A95ADC20051D209 /* macbook6.png */; };
@@ -60,6 +66,12 @@
 		A0B3388B1A66D2AC00D59718 /* StartScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartScene.swift; sourceTree = "<group>"; };
 		A0B3388D1A6753F700D59718 /* ResultScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultScene.swift; sourceTree = "<group>"; };
 		A0B3F5471A4A6E1E0016EDC7 /* Batsu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Batsu.png; sourceTree = "<group>"; };
+		A0C66E8A1A98610D00854183 /* glass-break4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "glass-break4.mp3"; sourceTree = "<group>"; };
+		A0C66E8C1A98617300854183 /* glass-break2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "glass-break2.mp3"; sourceTree = "<group>"; };
+		A0C66E8E1A986F1A00854183 /* macbook11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = macbook11.png; sourceTree = "<group>"; };
+		A0C66E901A98DC8100854183 /* MacSmoke.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MacSmoke.sks; sourceTree = "<group>"; };
+		A0C66E911A98DC8100854183 /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
+		A0C66E941A98F7A300854183 /* SmokeParticle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmokeParticle.swift; sourceTree = "<group>"; };
 		A0E585661A95A9FB0051D209 /* macbook4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = macbook4.png; sourceTree = "<group>"; };
 		A0E585681A95AB220051D209 /* macbook5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = macbook5.png; sourceTree = "<group>"; };
 		A0E5856A1A95ADC20051D209 /* macbook6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = macbook6.png; sourceTree = "<group>"; };
@@ -114,6 +126,9 @@
 				A070AFBE1A2FF98800FFC704 /* AppDelegate.swift */,
 				A070AFC21A2FF98800FFC704 /* GameScene.swift */,
 				A0B3388D1A6753F700D59718 /* ResultScene.swift */,
+				A0C66E901A98DC8100854183 /* MacSmoke.sks */,
+				A0C66E911A98DC8100854183 /* spark.png */,
+				A0C66E941A98F7A300854183 /* SmokeParticle.swift */,
 				A0F8DE2A1A9727860069C557 /* macbook.swift */,
 				A0B3388B1A66D2AC00D59718 /* StartScene.swift */,
 				A070AFC41A2FF98800FFC704 /* GameViewController.swift */,
@@ -133,7 +148,10 @@
 				A0E585681A95AB220051D209 /* macbook5.png */,
 				A0E5856A1A95ADC20051D209 /* macbook6.png */,
 				A0E5856E1A95B1DB0051D209 /* macbook8.png */,
+				A0C66E8A1A98610D00854183 /* glass-break4.mp3 */,
 				A0E585701A95B1E10051D209 /* macbook9.png */,
+				A0C66E8C1A98617300854183 /* glass-break2.mp3 */,
+				A0C66E8E1A986F1A00854183 /* macbook11.png */,
 				A0E585721A95B1E80051D209 /* macbook10.png */,
 				A0E5856C1A95B1D40051D209 /* macbook7.png */,
 				A0B3F5471A4A6E1E0016EDC7 /* Batsu.png */,
@@ -245,10 +263,15 @@
 			files = (
 				A0F02BA31A79D59B00FFDA46 /* macbook3.png in Resources */,
 				A0E5856F1A95B1DB0051D209 /* macbook8.png in Resources */,
+				A0C66E8F1A986F1A00854183 /* macbook11.png in Resources */,
+				A0C66E921A98DC8100854183 /* MacSmoke.sks in Resources */,
+				A0C66E8B1A98610D00854183 /* glass-break4.mp3 in Resources */,
 				A070AFCD1A2FF98800FFC704 /* LaunchScreen.xib in Resources */,
 				A045A0CA1A41DB270053D5F7 /* Black.png in Resources */,
 				A070AFCA1A2FF98800FFC704 /* Images.xcassets in Resources */,
+				A0C66E8D1A98617300854183 /* glass-break2.mp3 in Resources */,
 				A070AFC81A2FF98800FFC704 /* Main.storyboard in Resources */,
+				A0C66E931A98DC8100854183 /* spark.png in Resources */,
 				A0F02BA11A79D30200FFDA46 /* short_punch1.mp3 in Resources */,
 				A0B3F5481A4A6E1E0016EDC7 /* Batsu.png in Resources */,
 				A0E585691A95AB220051D209 /* macbook5.png in Resources */,
@@ -281,6 +304,7 @@
 				A0F8DE2B1A9727860069C557 /* macbook.swift in Sources */,
 				A070AFBF1A2FF98800FFC704 /* AppDelegate.swift in Sources */,
 				A0B3388E1A6753F700D59718 /* ResultScene.swift in Sources */,
+				A0C66E951A98F7A300854183 /* SmokeParticle.swift in Sources */,
 				A0B3388C1A66D2AC00D59718 /* StartScene.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

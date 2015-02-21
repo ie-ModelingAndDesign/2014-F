@@ -8,17 +8,22 @@
 
 import Spritekit
 
-class macbook: SKNode {
+class macbook: SKSpriteNode {
     var obj : SKSpriteNode!
-    func show(name: String){
-        obj.removeFromParent()
-        obj = SKSpriteNode(imageNamed: "\(name)")
+    //var Myscene : SKScene!
+    func show(name: String,myscene:SKScene){
+        //Myscene = myscene
+        obj = SKSpriteNode(imageNamed: name)
         obj.alpha = 1
         obj.position = CGPoint(x: 53, y: 135)
         obj.xScale = 0.4
         obj.yScale = 0.4
         obj.anchorPoint = CGPoint(x: 0, y: 0)
-        obj.name = "\(name)"
-        self.addChild(obj)
+        obj.name = name
+        myscene.addChild(obj)
+    }
+    func remove(){
+        obj.removeFromParent()
+        obj = nil
     }
 }
