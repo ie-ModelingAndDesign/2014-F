@@ -26,53 +26,7 @@ extension SKNode {
 }
 
 class GameViewController: UIViewController, UIGestureRecognizerDelegate {
-    /*override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        if let scene = StartScene.unarchiveFromFile("StartScene") as? StartScene {
-            
-            // ビューを得る.
-            let mySkView = self.view as SKView
-            
-            // FPSを表示させる.
-            mySkView.showsFPS = true
-            
-            // 現在存在するノードの数を表示させる.
-            mySkView.showsNodeCount = true
-            
-            // レンダリングパフォーマンスの設定.
-            mySkView.ignoresSiblingOrder = true
-            
-            // 剛体を表示させる.
-            mySkView.showsPhysics = true
-            
-            // シーンのサイズをスクリーンに見合ったサイズに変える.
-            scene.size = mySkView.frame.size
-            
-            mySkView.presentScene(scene)
-        }
-    }
     
-    override func shouldAutorotate() -> Bool {
-        return true
-    }
-    
-    override func supportedInterfaceOrientations() -> Int {
-        if UIDevice.currentDevice().userInterfaceIdiom == .Phone {
-            return Int(UIInterfaceOrientationMask.AllButUpsideDown.rawValue)
-        } else {
-            return Int(UIInterfaceOrientationMask.All.rawValue)
-        }
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Release any cached data, images, etc that aren't in use.
-    }
-    
-    override func prefersStatusBarHidden() -> Bool {
-        return true
-    }*/
     var scene: StartScene!
 
     override func viewDidLoad() {

@@ -15,7 +15,8 @@ class macbook: SKSpriteNode {
         //Myscene = myscene
         obj = SKSpriteNode(imageNamed: name)
         obj.alpha = 1
-        obj.position = CGPoint(x: 53, y: 135)
+        obj.position = CGPoint(x: 45, y: 200)
+        obj.zPosition = 2
         obj.xScale = 0.4
         obj.yScale = 0.4
         obj.anchorPoint = CGPoint(x: 0, y: 0)

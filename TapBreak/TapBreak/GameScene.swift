@@ -10,34 +10,55 @@ import SpriteKit
 
 class GameScene: SKScene {
     var maru : SKSpriteNode
+    var desk : SKSpriteNode
     var Tlimit : SKLabelNode
-    var time: Int = 61
+    var time: Int = 31
     var counter: Int = 0
     var mac : macbook!
     var smoke : SmokeParticle!
+    var bgm : BGMplayer!
     required init(coder aDecoder: NSCoder) {
         fatalError("NSCoder not supported")
     }
     override init(size: CGSize) {
         Tlimit = SKLabelNode(fontNamed: "limit")
         maru = SKSpriteNode(imageNamed: "macbook")
-
+        desk = SKSpriteNode(imageNamed: "desk.png")
         super.init(size: size)
-        backgroundColor = SKColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 1.0)
+        backgroundColor = SKColor(red: 255, green: 255, blue: 255, alpha: 1.0)
 
     }
     override func didMoveToView(view: SKView) {
+        
+        maru.alpha = 0
+        maru.position = CGPoint(x: 55, y: 202)
+        maru.zPosition = 2
+        maru.xScale = 0.37
+        maru.yScale = 0.37
+        maru.anchorPoint = CGPoint(x: 0, y: 0)
+        maru.name = name
+        self.addChild(maru)
+        
         mac = macbook()
         mac.show("macbook",myscene: self)
         
-        
+        bgm = BGMplayer()
+        bgm.BGMimport("bgm_maoudamashii_cyber07-1.mp3",myscene:self)
         var timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: "update", userInfo: nil, repeats: true)
+        
+        //let desk = SKSpriteNode(imageNamed: "desk.png")
+        desk.alpha = 1
+        desk.position = CGPoint(x:CGRectGetMidX(self.frame), y:CGRectGetMidY(self.frame)-250);
+        desk.zPosition = 0
+        desk.xScale = 1
+        desk.yScale = 1.8
+        desk.name = "Desk"
+        self.addChild(desk)
+        
     }
-    //var Tlimit : SKLabelNode
     func update() {
         time--
         if(time > -1){
-            
             Tlimit.removeFromParent()
             Tlimit = SKLabelNode(fontNamed: "American Typewriter Bold")
             Tlimit.text = "Time:\(time)"
@@ -48,6 +69,8 @@ class GameScene: SKScene {
             self.addChild(Tlimit)
         }else{
             if(time == -1){
+                bgm = BGMplayer()
+                bgm = nil
                 var Rscene: SKScene
                 Rscene = ResultScene(size: size)
                 Rscene.size = self.frame.size
@@ -55,22 +78,33 @@ class GameScene: SKScene {
                 self.view?.presentScene(Rscene, transition:TransitionEffect)
             }
         }
+        if(counter > 250){
+            bgm = BGMplayer()
+            bgm = nil
+            var Rscene: SKScene
+            Rscene = ResultScene(size: size)
+            Rscene.size = self.frame.size
+            let TransitionEffect = SKTransition.pushWithDirection(SKTransitionDirection.Down, duration: 0.5)
+            self.view?.presentScene(Rscene, transition:TransitionEffect)
+        }
+        let ud1 = NSUserDefaults.standardUserDefaults()
+        ud1.setInteger(time, forKey: "Tscore")
         println("\(time)")
     }
     
     override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
         for touch: AnyObject in touches {
-            //let touch: AnyObject = touches.anyObject()!
-            let location = touch.locationInNode(self)
-            //let touchedNode = self.containsPoint(location)
+            let location = touch.locationInNode(mac)
             if(maru.containsPoint(location)){
-                counter += 1
-                // 再生データの作成.
-                let mySoundAction: SKAction = SKAction.playSoundFileNamed("short_punch1.mp3", waitForCompletion: true)
                 
-                // 再生アクション.
-                self.runAction(mySoundAction);
-                println("touched \(counter)")
+                    counter++
+                    // 再生データの作成.
+                    let mySoundAction: SKAction = SKAction.playSoundFileNamed("short_punch1.mp3", waitForCompletion: true)
+                    // 再生アクション.
+                    self.runAction(mySoundAction);
+                    println("touched \(counter) \(mac.name)")
+                
+                
             }
             if(counter == 50){
                 mac.remove()
@@ -95,13 +129,18 @@ class GameScene: SKScene {
                 mac = nil
                 mac = macbook()
                 mac.show("macbook6",myscene: self)
-                
+                let mySoundAction: SKAction = SKAction.playSoundFileNamed("glass-break4.mp3", waitForCompletion: true)
+                // 再生アクション.
+                self.runAction(mySoundAction);
             }
             if(counter == 180){
                 mac.remove()
                 mac = nil
                 mac = macbook()
                 mac.show("macbook7",myscene: self)
+                let mySoundAction: SKAction = SKAction.playSoundFileNamed("glass-crack1.mp3", waitForCompletion: true)
+                // 再生アクション.
+                self.runAction(mySoundAction);
             }
             if(counter == 200){
                 mac.remove()
@@ -110,15 +149,25 @@ class GameScene: SKScene {
                 mac.show("macbook8",myscene: self)
                 smoke = SmokeParticle()
                 smoke.makeSmoke(self)
-                let mySoundAction: SKAction = SKAction.playSoundFileNamed("glass-break4.mp3", waitForCompletion: true)
+                let mySoundAction: SKAction = SKAction.playSoundFileNamed("glass-crack1.mp3", waitForCompletion: true)
                 // 再生アクション.
                 self.runAction(mySoundAction);
+                bgm = BGMplayer()
+                bgm = nil
+                if(bgm == nil){
+                    bgm = BGMplayer()
+                    bgm.BGMimport("BGM_4.wav",myscene:self)
+                }
+                
             }
             if(counter == 215){
                 mac.remove()
                 mac = nil
                 mac = macbook()
                 mac.show("macbook9",myscene: self)
+                let mySoundAction: SKAction = SKAction.playSoundFileNamed("glass-crack1.mp3", waitForCompletion: true)
+                // 再生アクション.
+                self.runAction(mySoundAction);
             }
             if(counter == 230){
                 mac.remove()
@@ -140,7 +189,15 @@ class GameScene: SKScene {
                 // 再生アクション.
                 self.runAction(mySoundAction);
             }
-            
+            if(counter >= 245){
+                mac.remove()
+                mac = nil
+                mac = macbook()
+                mac.show("break.png",myscene: self)
+                let mySoundAction: SKAction = SKAction.playSoundFileNamed("sei_ge_garasu_ware01.mp3", waitForCompletion: true)
+                // 再生アクション.
+                self.runAction(mySoundAction);
+            }
         }
         let ud = NSUserDefaults.standardUserDefaults()
         ud.setInteger(counter, forKey: "score")

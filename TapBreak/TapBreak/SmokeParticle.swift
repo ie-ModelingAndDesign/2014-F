@@ -20,11 +20,11 @@ extension SKEmitterNode {
 class SmokeParticle : SKEmitterNode{
     func makeSmoke(myscene:SKScene){
         var randomX = getRandomNumber(Min: 150, Max: 280)
-        var randomY = getRandomNumber(Min: 210, Max: 250)
+        var randomY = getRandomNumber(Min: 270, Max: 310)
         var smoke : SKEmitterNode
         smoke = SKEmitterNode.emitterNodeWithName("MacSmoke")
         smoke.position = CGPoint(x: CGFloat(randomX), y: CGFloat(randomY))
-        smoke.zPosition = 2
+        smoke.zPosition = 3
         // シーンに追加.
         myscene.addChild(smoke)
     }
