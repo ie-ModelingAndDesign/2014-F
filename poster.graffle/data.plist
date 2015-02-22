@@ -60,6 +60,36 @@
 	<array>
 		<dict>
 			<key>Bounds</key>
+			<string>{{24.5625, 609.59938621520996}, {234, 96.875}}</string>
+			<key>Class</key>
+			<string>ShapedGraphic</string>
+			<key>ID</key>
+			<integer>338</integer>
+			<key>ImageID</key>
+			<integer>18</integer>
+			<key>Shape</key>
+			<string>Rectangle</string>
+			<key>Style</key>
+			<dict>
+				<key>fill</key>
+				<dict>
+					<key>Draws</key>
+					<string>NO</string>
+				</dict>
+				<key>shadow</key>
+				<dict>
+					<key>Draws</key>
+					<string>NO</string>
+				</dict>
+				<key>stroke</key>
+				<dict>
+					<key>Draws</key>
+					<string>NO</string>
+				</dict>
+			</dict>
+		</dict>
+		<dict>
+			<key>Bounds</key>
 			<string>{{377.99999713897705, 292.50263977050781}, {40, 40}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
@@ -1550,36 +1580,6 @@
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{29.812499072541641, 612.68748530292908}, {222.25, 91.375}}</string>
-			<key>Class</key>
-			<string>ShapedGraphic</string>
-			<key>ID</key>
-			<integer>3</integer>
-			<key>ImageID</key>
-			<integer>1</integer>
-			<key>Shape</key>
-			<string>Rectangle</string>
-			<key>Style</key>
-			<dict>
-				<key>fill</key>
-				<dict>
-					<key>Draws</key>
-					<string>NO</string>
-				</dict>
-				<key>shadow</key>
-				<dict>
-					<key>Draws</key>
-					<string>NO</string>
-				</dict>
-				<key>stroke</key>
-				<dict>
-					<key>Draws</key>
-					<string>NO</string>
-				</dict>
-			</dict>
-		</dict>
-		<dict>
-			<key>Bounds</key>
 			<string>{{276, 109}, {282, 96.875}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
@@ -1967,9 +1967,10 @@
 	<key>HPages</key>
 	<integer>1</integer>
 	<key>ImageCounter</key>
-	<integer>18</integer>
+	<integer>19</integer>
 	<key>ImageLinkBack</key>
 	<array>
+		<dict/>
 		<dict/>
 		<dict/>
 		<dict/>
@@ -1981,6 +1982,7 @@
 	</array>
 	<key>ImageList</key>
 	<array>
+		<string>image18.png</string>
 		<string>image17.png</string>
 		<string>image16.png</string>
 		<string>image14.png</string>
@@ -2027,7 +2029,7 @@
 	<key>MasterSheets</key>
 	<array/>
 	<key>ModificationDate</key>
-	<string>2015-02-22 07:37:45 +0000</string>
+	<string>2015-02-22 09:47:19 +0000</string>
 	<key>Modifier</key>
 	<string>Takara Tsubasa</string>
 	<key>NotesVisible</key>
@@ -2117,7 +2119,7 @@
 		<key>SidebarWidth</key>
 		<integer>120</integer>
 		<key>VisibleRegion</key>
-		<string>{{-54, 144}, {667, 639}}</string>
+		<string>{{-61, -2}, {681, 639}}</string>
 		<key>Zoom</key>
 		<real>1</real>
 		<key>ZoomValues</key>
