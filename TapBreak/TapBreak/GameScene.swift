@@ -7,6 +7,7 @@
 //
 
 import SpriteKit
+import UIKit
 
 class GameScene: SKScene {
     var maru : SKSpriteNode
@@ -14,6 +15,7 @@ class GameScene: SKScene {
     var Tlimit : SKLabelNode
     var time: Int = 31
     var counter: Int = 0
+    var timer : NSTimer!
     var mac : macbook!
     var smoke : SmokeParticle!
     var bgm : BGMplayer!
@@ -44,7 +46,7 @@ class GameScene: SKScene {
         
         bgm = BGMplayer()
         bgm.BGMimport("bgm_maoudamashii_cyber07-1.mp3",myscene:self)
-        var timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: "update", userInfo: nil, repeats: true)
+        timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: "update", userInfo: nil, repeats: true)
         
         //let desk = SKSpriteNode(imageNamed: "desk.png")
         desk.alpha = 1
@@ -71,6 +73,9 @@ class GameScene: SKScene {
             if(time == -1){
                 bgm = BGMplayer()
                 bgm = nil
+                
+                timer.invalidate()
+                
                 var Rscene: SKScene
                 Rscene = ResultScene(size: size)
                 Rscene.size = self.frame.size
@@ -78,7 +83,7 @@ class GameScene: SKScene {
                 self.view?.presentScene(Rscene, transition:TransitionEffect)
             }
         }
-        if(counter > 250){
+        if(counter > 246){
             bgm = BGMplayer()
             bgm = nil
             var Rscene: SKScene
@@ -97,12 +102,12 @@ class GameScene: SKScene {
             let location = touch.locationInNode(mac)
             if(maru.containsPoint(location)){
                 
-                    counter++
-                    // 再生データの作成.
-                    let mySoundAction: SKAction = SKAction.playSoundFileNamed("short_punch1.mp3", waitForCompletion: true)
-                    // 再生アクション.
-                    self.runAction(mySoundAction);
-                    println("touched \(counter) \(mac.name)")
+                counter++
+                // 再生データの作成.
+                let mySoundAction: SKAction = SKAction.playSoundFileNamed("short_punch1.mp3", waitForCompletion: true)
+                // 再生アクション.
+                self.runAction(mySoundAction);
+                println("touched \(counter) \(mac.name)")
                 
                 
             }
